@@ -1,0 +1,12 @@
+.sass-cache/
+.gulp/
+bower_components/
+node_modules/
+build/
+/layout/
+/source/
+*.rar
+**/**/*.rar
+*.zip
+**/**/*.zip
+.idea/
