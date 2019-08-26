@@ -4,7 +4,6 @@
 @import 'base/index';
 @import 'theme/index';
 
-
 header {
-    @extend %#{$ff-default};
+    @extend %#{$rob_regular};
 }
