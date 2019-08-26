@@ -13,7 +13,9 @@ $light-grey:#f4f6f5;
 
 $default-font:15px;
 
-$rob_medium:'Roboto-medium',sans-serif;
-$rob_regular:'Roboto-regular',sans-serif;
-$rob_bold:'Roboto-bold',sans-serif;
-$lato: 'Lato-Semibold',sans-serif;
+$rob_medium:'Roboto-medium';
+$rob_regular:'Roboto-regular';
+$rob_bold:'Roboto-bold';
+$lato: 'Lato-Semibold';
+
+$font-type: ($rob_bold, $rob_medium, $rob_regular, $lato);
