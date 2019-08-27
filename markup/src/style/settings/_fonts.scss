@@ -1,47 +1,63 @@
-@function str-replace($string, $search, $replace: "") {
-	$index: str-index($string, $search);
-
-	@if $index {
-		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
-	}
-
-	@return $string;
+@font-face {
+	font-family: 'lato-semibold';
+	src: url("../../../src/fonts/lato-semibold/lato-semibold-webfont.woff") format('woff'),
+		 url("../../../src/fonts/lato-semibold/lato-semibold-webfont.woff2") format('woff2');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
 
-@mixin ff-mixin($name, $path, $weight: null, $style: null, $exts: eot woff ttf) {
-	$src: null;
-
-	$extmods: (
-		eot: "?",
-		svg: "#" + str-replace($name, " ", "_")
-	);
-
-	$formats: (
-		otf: "opentype",
-		ttf: "truetype"
-	);
-
-	@each $ext in $exts {
-		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
-		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
-		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
-	}
-
-	@font-face {
-		font-family: quote($name);
-		font-style: $style;
-		font-weight: $weight;
-		src: $src;
-	}
+@font-face {
+	font-family: 'opensans-semibold';
+	src: url("../../../src/fonts/opensans-semibold/opensans-semibold-webfont.woff") format('woff'),
+	url("../../../src/fonts/opensans-semibold/opensans-semibold-webfont.woff2") format('woff2');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
 
-@each $type,
-$font in $font-type {
-    $font-name: $type;
-    $font-folder: "../fonts/#{$font-name}/#{$font-name}";
-    @include ff-mixin($font-name, $font-folder, $font );
-    %#{$type} {
-        font-family: $font-name, sans-serif;
-    };
+@font-face {
+	font-family: 'raleway-bold';
+	src: url("../../../src/fonts/raleway-bold/raleway-bold-webfont.woff") format('woff'),
+	url("../../../src/fonts/raleway-bold/raleway-bold-webfont.woff2") format('woff2');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'roboto-bold';
+	src: url("../../../src/fonts/roboto-bold/roboto-bold-webfont.woff") format('woff'),
+	url("../../../src/fonts/roboto-bold/roboto-bold-webfont.woff2") format('woff2');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'roboto-light';
+	src: url("../../../src/fonts/roboto-light/roboto-light-webfont.woff") format('woff'),
+	url("../../../src/fonts/roboto-light/roboto-light-webfont.woff2") format('woff2');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'roboto-medium';
+	src: url("../../../src/fonts/roboto-medium/roboto-medium-webfont.woff") format('woff'),
+	url("../../../src/fonts/roboto-medium/roboto-medium-webfont.woff2") format('woff2');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'roboto-regular';
+	src: url("../../../src/fonts/roboto-regular/roboto-regular-webfont.woff") format('woff'),
+	url("../../../src/fonts/roboto-regular/roboto-regular-webfont.woff2") format('woff2');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
 
