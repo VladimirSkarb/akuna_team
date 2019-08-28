@@ -1,5 +1,88 @@
-header {
-    background: #000;
-    color: #fff;
+body {
+    margin: 0 8px;
 }
 
+ul {
+    list-style: none;
+}
+
+.header-flex {
+    height: 1,7%;
+}
+
+
+.btn-default {
+    font-size: $f-size-base;
+    line-height: $line-height-base;
+    border-radius: 3px;
+    width: 70px;
+    height: 30px;
+    border-color: transparent;
+    margin: 0 2px;
+}
+
+.btn-header1 {
+    color: $white;
+    background-color: $btn-green-bg;
+
+    &:hover {
+        background-color: $btn-green-bg-hover;
+    }
+}
+
+.btn-header2 {
+    color: $white;
+    background-color: $btn-red-bg;
+
+    &:hover {
+        background-color: $btn-red-bg-hover;
+    }
+}
+
+.btn-icon {
+    background-color: $gray-light2;
+    color: $gray;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border-color: transparent;
+    margin: 0 24px;
+}
+
+.help {
+    color: $gray;
+    font-size: $f-size-base;
+    line-height: $line-height-base;
+    margin: 0 26px;
+
+    &-a {
+        color: $btn-red-bg;
+
+        &:hover {
+            color: $btn-red-bg-hover;
+        }
+    }
+}
+
+.nav {
+    background-color: $nav-color2;
+    padding: 0 19.3%;
+    margin: 0 auto;
+    height: 60px;
+
+    li {
+        color: $white;
+        margin: 0 20px;
+        font-size: $f-size-base;
+        line-height: $line-height-base;
+
+        &:hover {
+            color: $nav-color-hover;
+        }
+    }
+}
+
+.banner {
+    height: 9.6%;
+    background-image: url('../../img/header-bg.jpg');
+}

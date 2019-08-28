@@ -1,1 +1,144 @@
 @import "../settings/variables";
+@import "../settings/_mixins.scss";
+@import '../settings/_index.scss';
+@import '../global.scss';
+@import '../block/_header.scss';
+
+%list-reser {
+    list-style: none;
+}
+
+.product {
+    &-section {
+        background-color: #f4f6f5;
+        overflow: hidden;
+    }
+
+    &-description {
+        padding: 30px;
+        border-bottom: 1px solid #e7ecf2;
+    }
+
+    &-name {
+        font-size: 18px;
+        display: block;
+        margin: 0 0 15px;
+    }
+
+    &-category {
+        color: #8bc34a;
+        font-size: 14px;
+    }
+
+    &-reiting {
+        padding: 20px 30px;
+
+        .vendor-item {
+
+            .img-holder {
+                background-color: #b5b5b5;
+                border-radius: 50%;
+                overflow: hidden;
+                width: 30px;
+                height: 30px;
+                margin-right: 14px;
+            }
+
+            span {
+                font-size: 14px;
+                color: #546e7a;
+            }
+        }
+
+        &_holder {
+            .icon-holder {
+                margin-right: 14px;
+
+                img {
+                    width: 68px;
+                }
+            }
+        }
+
+        &_text {
+            position: relative;
+            font-size: 12px;
+
+            &:before {
+                content: '(';
+                color: #b0bec5;
+            }
+
+            &:after {
+                content: ')';
+                color: #b0bec5;
+            }
+        }
+    }
+}
+
+.tabs {
+    &-list {
+        @extend %list-reset;
+
+        li {
+            padding: 0 3px 6px;
+
+            &.active-tab {
+                a {
+                    background-color: #e74c3c;
+                    color: #fff;
+                }
+            }
+        }
+
+        a {
+            @include animate(color background-color)
+
+            display: block;
+            background-color: #fff;
+            color: #263238;
+            padding: 20px 30px;
+
+            &:hover {
+                background-color: #da6e63;
+                color: #fff;
+            }
+        }
+    }
+
+    &-block {
+        padding: 30px 0;
+    }
+}
+
+.tab-col {
+    @include animate(box-shadow);
+    border: 1px solid #e7ecf2;
+    margin: 0 0 30px;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0 15px 15px -7px #ccc;
+    }
+
+    &.hot-product {
+        position: relative;
+
+        &:before {
+            @include triangle(65px, #8bc34a, up-left);
+
+            position: absolute;
+            content:'';
+            display: block;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .img-holder {
+        height: 250px;
+        background-color: #d4d4d4;
+    }
+}
+

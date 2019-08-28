@@ -1,10 +1,115 @@
 @import '../../node_modules/normalize.css/normalize';
 @import '../../node_modules/reset-css/reset';
-@import 'settings/index';
+@import 'settings/_index.scss';
 @import 'base/index';
 @import 'theme/index';
+@import "settings/variables";
 
+%list-reset {
+    list-style: none;
+    text-decoration: none;
+}
 
-header {
-    @extend %#{$ff-default};
+body,
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h2 {
+    font-size: $f-size-h2;
+    margin: 0 0 60px;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 15px;
+    width: 100%;
+    margin: 0 auto;
+  
+    &-fluid{
+      max-width: 100%;
+    }
+}
+
+.row {
+    margin: 0 -15px;
+}
+
+.tabs-list {
+    @extend %list-reset;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.d-f {
+    display: flex;
+}
+
+.fw-w{
+    flex-wrap: wrap;
+}
+
+.jc-c {
+    justify-content: center;
+}
+
+.ai-c {
+    align-items: center;
+}
+
+.ac-fs {
+    align-content: flex-start;
+}
+
+.fd-c {
+    flex-direction: column;
+}
+
+.fd-r {
+    flex-direction: row
+}
+
+.jc-sb {
+    justify-content: space-between;
+}
+
+.col-4 {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.tabs {
+    &-list {
+        li {
+            padding: 0 3px;
+            
+            &.active-tab {
+                a {
+                    background-color: $red;
+                    color: $white;
+                }
+            }
+        }
+
+        a {
+            transition: 0.3s background-color ease-in out;
+            display: block;
+            padding: 14px 20px;
+            background-color: $white;
+            color: $nav-color;
+
+            &:hover {
+                background-color: #fba097;
+                color: $white;
+            }
+        }
+    }
 }
