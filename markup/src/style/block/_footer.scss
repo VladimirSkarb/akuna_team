@@ -1,4 +1,201 @@
-footer {
-    background: #000;
-    color: #fff;
+@import "../global.scss";
+@import "../settings/_index.scss";
+
+.footer{
+    background-color: $dark-grey;
+    color: $white;
+    padding: 115px 0 35px;
+    line-height: 24px;
+
+  h2{
+    font-family: $ralew_bold;
+    font-size: 22px;
+    line-height: 24px;
+    margin:0 0 30px 0;
+  }
+
+  h3{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+
+  .row{
+    margin-bottom: 95px;
+  }
+
+  .col:first-child {
+    margin-right: 50px;
+  }
+
+  .footer-line{
+    height: 3px;
+    width: 51px;
+    background-color: $green;
+    margin-bottom: 35px;
+  }
+
+  i{
+    color: $green;
+  }
+
+  .footer_text{
+    font-size: $default-font;
+    color: #b7c3c8;
+    margin-bottom: 35px;
+  }
+
+  .footer_address{
+    margin-bottom: 30px;
+  }
+
+  .footer_address,
+  .footer-phone{
+    font-family: $lato;
+    font-size: 14px;
+    position: relative;
+
+    .icon-footer{
+      top: 2px;
+      left: 0;
+      position: absolute;
+
+      i{
+        font-size: 18px;
+      }
+    }
+
+  }
+
+  .contact-text{
+    padding-left: 30px;
+
+    address{
+      font-style: normal;
+    }
+
+  }
+
+  .footer-list{
+
+    li{
+      color: #b7c3c8;
+      line-height: 36px;
+
+      a{
+        padding-left: 10px;
+      }
+
+      &:hover{
+        color: $white;
+      }
+    }
+  }
+
+  .footer-social{
+
+    margin-bottom: 40px;
+
+    .facebook-social, .twitter-social,
+    .youtube-social, .pinterest-social,
+    .linkedin-social{
+      border-radius: 4px;
+      position: relative;
+      height: 27px;
+      width: 27px;
+      background-color: #fff;
+      margin-right: 10px;
+
+      i{
+        font-size: 33px;
+        position: absolute;
+        top: -3px;
+        left: -1px;
+        color: #3b5998;
+      }
+
+      &:hover{
+        opacity: .5;
+      }
+
+    }
+
+    .twitter-social{
+
+      i{
+        color: #55acee;
+      }
+    }
+
+    .youtube-social{
+      i{
+        color: #e52d27;
+      }
+    }
+
+    .pinterest-social{
+
+      height: 28px;
+      width: 28px;
+
+      i{
+        top: 3px;
+        left: 3px;
+        font-size: 22px;
+        color: #c32032;
+      }
+    }
+
+    .linkedin-social{
+
+      i{
+        color: #1565c0;
+      }
+    }
+  }
+
+  form{
+    max-width: 261px;
+    height: 40px;
+    box-shadow: 0 -0.5px 0 0.5px $black;
+
+    input{
+      outline: none;
+      width: 218px;
+      background-color: #2f3c43;
+      border: none;
+      font-size: 14px;
+      color: #697378;
+      padding-left: 15px;
+    }
+
+    button{
+
+      width: 43px;
+      height: 40px;
+      background-color: $green;
+      position: relative;
+
+      i{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        color: $white;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .footer-copyright{
+
+    border-top:1px solid #424d53;
+
+    div{
+      padding-top: 25px;
+      color: #919699;
+    }
+
+  }
+
+
 }
