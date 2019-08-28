@@ -1,9 +1,102 @@
-@import '../../node_modules/normalize.css/normalize';
-@import '../../node_modules/reset-css/reset';
-@import 'settings/index';
-@import 'base/index';
-@import 'theme/index';
+@import "../../node_modules/normalize.css/normalize";
+@import "../../node_modules/reset-css/reset";
+@import "settings/_index.scss";
 
-header {
-    @extend %#{$rob_regular};
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
+body{
+    font-family: $rob_regular, sans-serif;
+    color: $dark-grey;
+    background-color: $white;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.row {
+    margin: 0 -15px;
+}
+
+.row:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.col {
+    padding: 0 15px;
+}
+
+.col-4{
+    width: calc(100% / 4);
+}
+
+.d-f{
+    display: flex;
+}
+
+.fw-w{
+    flex-wrap: wrap;
+}
+
+.jc-c{
+    justify-content: center;
+}
+
+.jc-sb{
+    justify-content: space-between;
+}
+
+.jc-fs{
+    justify-content: flex-start;
+}
+
+.fd-c{
+    flex-direction: column;
+}
+
+.ai-c{
+    align-items: center;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.container{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 15px;
+
+    &-fluid{
+        max-width: 100%;
+    }
+}
+
