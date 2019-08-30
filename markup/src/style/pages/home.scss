@@ -1,1 +1,155 @@
-@import "../settings/variables";
+@import "../global.scss";
+@import "../settings/_index.scss";
+@import "../block/_header.scss";
+@import "../block/_footer.scss";
+
+%list-reset{
+  list-style: none;
+}
+
+h2{
+  font-family: $rob_bold;
+  font-weight: 700;
+  font-size: 36px;
+  margin-bottom: 60px;
+}
+
+.tabs-list{
+  @extend %list-reset;
+}
+
+.product{
+  &-section{
+    padding: 115px 0;
+    background-color: #f4f6f5;
+  }
+
+  &-description{
+    padding: 30px;
+    border-bottom: 1px solid #e7ecf2;
+  }
+
+  &-name{
+    font: 500 18px $rob_medium;
+    display: block;
+    margin: 0 0 15px;
+  }
+
+  &-category{
+    font-size:14px;
+    color:$green;
+  }
+
+  &-reiting{
+    padding: 20px 30px;
+
+    .vendor-item{
+
+      .img-holder {
+        overflow: hidden;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        margin-right: 14px;
+        background-color: #b5b5b5;
+      }
+
+      span{
+        color: #546e7a;
+        font-size: 14px;
+      }
+    }
+
+    &_holder{
+
+      .icon-holder{
+        margin-right: 14px;
+      }
+    }
+
+    &_text{
+      position: relative;
+      font-size: 12px;
+
+      &:before{
+        content: '(';
+        color: #b0bec5;
+      }
+
+      &:after{
+        content: ')';
+        color: #b0bec5;
+      }
+    }
+  }
+
+}
+
+  .tabs-list{
+
+    @extend %list-reset;
+    margin: 0 0 30px;
+
+    li{
+      padding: 0 3px;
+
+      &.active{
+        a{
+          outline: none;
+          font:500 14px $rob_medium;
+          background-color: $red;
+          color: $white;
+        }
+      }
+    }
+    a{
+      @include animate(color backgraund-color);
+      display: block;
+      padding: 10px 30px;
+      background-color: $white;
+      color: $dark_grey;
+
+      &:hover{
+        background-color: #da6e63;
+        color: $white;
+      }
+    }
+  }
+
+  .tabs-block{
+    padding: 30px 0;
+  }
+
+.tab-col{
+  @include animate(box-shadow);
+
+  border: 1px solid #e7ecf2;
+  background-color: $white;
+  margin: 0 0 30px;
+  cursor: pointer;
+
+  &:hover{
+    box-shadow: 0 15px 15px -7px #ccc;
+  }
+
+  &.hot-product{
+    position: relative;
+
+    &:before{
+      @include triangle(65px, $green, up-left);
+
+      position: absolute;
+      content: '';
+      display: block;
+      top:0;
+      left: 0;
+    }
+  }
+
+  .img-holder{
+    height: 250px;
+    background-color: $grey;
+  }
+}
+
+

@@ -1,5 +1,7 @@
+@import "../settings/_index.scss";
+
 header {
-    background: #000;
-    color: #fff;
+    background: $red;
+    height: 50px;
 }
 
