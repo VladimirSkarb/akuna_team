@@ -5,14 +5,9 @@ body {
     margin: 0 8px;
 }
 
-ul {
-    list-style: none;
-}
-
 .header-flex {
-    height: 1,7%;
+    height: 1.7%;
 }
-
 
 .btn-default {
     font-size: $f-size-base;
@@ -47,7 +42,7 @@ ul {
 }
 
 .btn-icon {
-    background-color: $gray-light2;
+    background-color: #f5f5f5;
     color: #a0a0a0;
     width: 35px;
     height: 35px;
@@ -57,7 +52,6 @@ ul {
 }
 
 .help {
-    color: $gray;
     font-size: $f-size-base;
     line-height: $line-height-base;
     margin: 0 26px;
@@ -97,7 +91,6 @@ ul {
     background-image: url('../../img/header-bg.jpg');
     filter: grayscale(100%);
     color: $white;
-    margin-bottom: 120px;
 
     &_title {
         font-size: $f-size-h1;
