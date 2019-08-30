@@ -21,7 +21,7 @@ ___
     - Далее, через **командную строку node.js** мы устанавливаем глобально клиент gulp: `npm i gulp-cli -g`
 
 - ##### Установка модулей для Gulp
-    - В терминале (windows node.js терминал, lynux терминал или терминал IDE) переходим в папку "markup" роекта и прописываем следующее:
+    - В терминале (windows node.js терминал, lynux терминал или терминал IDE) переходим в папку "markup" проекта и прописываем следующее:
 `npm i --save-dev browser-sync del gulp-autoprefixer gulp-cache gulp-changed gulp-csso gulp-group-css-media-queries gulp-html-prettify gulp-if gulp-imagemin gulp-load-plugins gulp-newer gulp-notify gulp-plumber gulp-pug gulp-remove-html gulp-rename gulp-rigger gulp-sass gulp-sourcemaps gulp-tinypng-nokey gulp-uglify gulp.spritesmith imagemin-pngquant vinyl-ftp`
 
 ## Сommands for the terminal
