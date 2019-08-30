@@ -1,28 +1,38 @@
 // --------------------- Colors
 
 $white: #fff;
+$red: #e74c3c;
 $black: #000;
 $gray-dark: #242424;
 $gray: #49505a;
 $gray-light: #f2f2f5;
 $gray-light2: #f5f5f5;
 $gray-lighter: #dcdfe5;
-$blue-dark: #263238;
 $blue: #21ace3;
-$red: #ed3237;
+$red2: #ed3237;
 $green: #42cc42;
 $green-light: #8bc34a;
 $orange: #fe802d;
+$dark-grey:#263238;
+$orange:#ffa726;
+$grey:#d4d4d4;
+$light-grey:#f4f6f5;
 
-$main-color: $blue;
+//Fonts
 
 $nav-color: $gray;
 $nav-color-hover: darken($white, 25%);
-$nav-color2: $blue-dark;
+$nav-color2: $dark-grey;
 $bg-nav-color-hover: darken($nav-color, 10%);
+$default-font:15px;
 
-$link-color: $main-color;
-$link-color-hover: darken($link-color, 10%);
+$rob_medium:'roboto-medium', sans-serif;
+$rob_regular:'roboto-regular', sans-serif;
+$rob_bold:'roboto-bold', sans-serif;
+$rob_light:'roboto-light', sans-serif;
+$lato: 'lato-semibold', sans-serif;
+$ralew_bold: 'raleway-bold', sans-serif;
+$op-semibold: 'opensans-semibold', sans-serif;
 
 $bg-color-base: $white;
 $bg-color-add: $gray-light;
@@ -41,10 +51,6 @@ $pad-base: 0 15px;
 $btn-red-color: $white;
 $btn-red-bg: $red;
 $btn-red-bg-hover: darken($btn-red-bg, 10%);
-
-$btn-main-color: $white;
-$btn-main-bg: $main-color;
-$btn-main-bg-hover: darken($btn-main-bg, 10%);
 
 $btn-success-color: $white;
 $btn-success-bg: $green;

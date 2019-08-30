@@ -1,10 +1,10 @@
-@import "../settings/variables";
 @import "../settings/_mixins.scss";
-@import '../settings/_index.scss';
-@import '../global.scss';
-@import '../block/_header.scss';
+@import "../global.scss";
+@import "../settings/_index.scss";
+@import "../block/_header.scss";
+@import "../block/_footer.scss";
 
-%list-reser {
+%list-reset {
     list-style: none;
 }
 
@@ -93,8 +93,8 @@
         }
 
         a {
-            @include animate(color background-color)
-
+            @include animate(color background-color);
+            
             display: block;
             background-color: #fff;
             color: #263238;

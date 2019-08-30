@@ -1,3 +1,6 @@
+@import "../global.scss";
+@import "../settings/_index.scss";
+
 body {
     margin: 0 8px;
 }
@@ -24,6 +27,8 @@ ul {
 .btn-header1 {
     color: $white;
     background-color: $btn-green-bg;
+    font-family: $rob_regular;
+    font-size: $f-size-base;
 
     &:hover {
         background-color: $btn-green-bg-hover;
@@ -33,6 +38,8 @@ ul {
 .btn-header2 {
     color: $white;
     background-color: $btn-red-bg;
+    font-family: $rob_regular;
+    font-size: $f-size-base;
 
     &:hover {
         background-color: $btn-red-bg-hover;
@@ -41,7 +48,7 @@ ul {
 
 .btn-icon {
     background-color: $gray-light2;
-    color: $gray;
+    color: #a0a0a0;
     width: 35px;
     height: 35px;
     border-radius: 50%;
@@ -54,6 +61,8 @@ ul {
     font-size: $f-size-base;
     line-height: $line-height-base;
     margin: 0 26px;
+    font-family: $rob_regular;
+    color: #546e7a;
 
     &-a {
         color: $btn-red-bg;
@@ -75,6 +84,7 @@ ul {
         margin: 0 20px;
         font-size: $f-size-base;
         line-height: $line-height-base;
+        font-family: $rob_regular;
 
         &:hover {
             color: $nav-color-hover;
@@ -82,7 +92,41 @@ ul {
     }
 }
 
-.banner {
-    height: 9.6%;
+.banner-search {
+    height: 532px;
     background-image: url('../../img/header-bg.jpg');
+    filter: grayscale(100%);
+    color: $white;
+    margin-bottom: 120px;
+
+    &_title {
+        font-size: $f-size-h1;
+        font-family: $rob_bold;
+        font-weight: 700;
+    }
+
+    &_text {
+        margin: 35px 0 57px;
+        font-family: $rob_regular;
+        font-size: 20px;
+    }
+}
+
+.search-bar {
+    img {
+        position: absolute;
+        top: 306px;
+        right: 420px;
+    }
+
+    .banner-search_bar {
+        width: 670px;
+        height: 56px;
+        padding: 0 20px 0 25px;
+        border-radius: 3px;
+        border-color: transparent;
+        box-shadow: 0 1px 10px rgba(124, 178, 64, 0.75);
+        font-family: $rob_regular;
+        font-size: $f-size-base;
+    }
 }
