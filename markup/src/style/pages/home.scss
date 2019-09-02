@@ -7,6 +7,61 @@
   list-style: none;
 }
 
+.bg-block{
+  background-position: 50% 50%;
+  background-repeat:no-repeat;
+  background-size: cover;
+}
+
+.visual-section {
+  color: $white;
+
+  h1{
+    font: 700 48px $rob_bold;
+    padding-top: 155px;
+  }
+
+  p{
+    font: 500 20px $rob_medium;
+    padding-top: 35px;
+    margin-bottom: 55px;
+  }
+
+  form{
+    margin-bottom: 175px;
+
+    .input-holder {
+      position: relative;
+      width: 670px;
+
+      img{
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+      input {
+        @include animate(box-shadow);
+        @include placeholder {
+          color: #90a4ae;
+        }
+
+        padding: 15px 25px;
+        border: none;
+        width: 100%;
+        height: 60px;
+        box-shadow: 0 1px 10px rgba(100, 100, 100, 0.75);
+
+        &:focus,
+        &:active {
+          box-shadow: 0 1px 10px rgba(124, 178, 64, 0.75);
+          outline: none;
+        }
+      }
+    }
+  }
+}
+
 h2{
   font-family: $rob_bold;
   font-weight: 700;
@@ -93,6 +148,9 @@ h2{
     li{
       padding: 0 3px;
 
+      @include media('<=tablet'){
+        margin-bottom: 5px;
+      }
       &.active{
         a{
           outline: none;
@@ -120,7 +178,7 @@ h2{
     padding: 30px 0;
   }
 
-.tab-col{
+.tab-col {
   @include animate(box-shadow);
 
   border: 1px solid #e7ecf2;
@@ -128,28 +186,46 @@ h2{
   margin: 0 0 30px;
   cursor: pointer;
 
-  &:hover{
+  &:hover {
     box-shadow: 0 15px 15px -7px #ccc;
   }
 
-  &.hot-product{
+  &.hot-product {
     position: relative;
 
-    &:before{
+    &:before {
       @include triangle(65px, $green, up-left);
 
       position: absolute;
       content: '';
       display: block;
-      top:0;
+      top: 0;
       left: 0;
+    }
+
+    &:after {
+      position: absolute;
+      color: $white;
+      display: inline-block;
+      content: '\f0e7';
+      -webkit-font-smoothing: antialiased;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      line-height: 1;
+      font-family: "Font Awesome 5 Free", sans-serif;
+      font-weight: 900;
+      top: 14px;
+      left: 14px;
     }
   }
 
-  .img-holder{
+  .img-holder {
     height: 250px;
     background-color: $grey;
   }
 }
+
+
 
 
