@@ -1,0 +1,60 @@
+@import "../global.scss";
+@import "../settings/_index.scss";
+@import "../block/_header.scss";
+@import "../block/_footer.scss";
+
+.breadcrumbs{
+  &-holder{
+    width: 100%;
+    padding: 0 15px;
+    margin: 40px 0;
+  }
+
+  &-nav{
+    &_list{
+      margin:  0 -10px;
+
+      li{
+        position: relative;
+        padding: 0 10px;
+
+        &:last-child{
+          &:after{
+            display: none;
+          }
+        }
+
+        &:after{
+          position: absolute;
+          content: '-';
+          top: 50%;
+          transform: translateY(-50%);
+          right: -4px;
+          color: $green;
+        }
+      }
+    }
+  }
+}
+
+.aside{
+  padding: 0 15px;
+  width: 300px;
+}
+
+.bg-white {
+  background-color: $white;
+  padding: 25px 30px;
+  margin: 0 0 30px;
+}
+
+.products{
+  &-holder{
+    padding: 0 15px;
+    width: calc(100% - 300px);
+
+    .sorts-holder{
+      width: 100%;
+    }
+  }
+}

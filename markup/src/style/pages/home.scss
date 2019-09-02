@@ -62,13 +62,6 @@
   }
 }
 
-h2{
-  font-family: $rob_bold;
-  font-weight: 700;
-  font-size: $f-size-h1;
-  margin-bottom: 60px;
-}
-
 .tabs-list{
   @extend %list-reset;
 }
@@ -77,6 +70,13 @@ h2{
   &-section{
     padding: 115px 0;
     background-color: #f4f6f5;
+
+    h2{
+      font-family: $rob_bold;
+      font-weight: 700;
+      font-size: $f-size-h1;
+      margin-bottom: 60px;
+    }
   }
 
   &-description{
