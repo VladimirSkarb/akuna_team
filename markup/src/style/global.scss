@@ -5,7 +5,6 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    
     padding: 0;
 }
 
@@ -13,6 +12,46 @@ body{
     font-family: $rob_regular, sans-serif;
     color: $dark-grey;
     background-color: $white;
+    font-size: $default-font;
+}
+
+h2{
+    font: 700 $f-size-h2 $rob_bold;
+    margin-bottom: 60px;
+
+    @include media('<=768px'){
+        font-size: 30px;
+        margin-bottom: 40px;
+    }
+
+    @include media('<=660px'){
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+
+    @include media('<=550px'){
+        font-size: 22px;
+    }
+
+    @include media('<=484px'){
+        font-size: 20px;
+    }
+}
+
+h3{
+    font: 500 $f-size-h3 $rob_medium;
+
+    @include media('<=900px'){
+        font-size: 20px;
+    }
+
+    @include media('<=788px'){
+        font-size: 19px;
+    }
+
+    @include media('<=750px'){
+        font-size: 17px;
+    }
 }
 
 .main{
@@ -84,6 +123,14 @@ button {
             width: 100%;
         }
     }
+
+    &-2{
+        width: 50%;
+
+        @include media('<=700px'){
+            width: 100%;
+        }
+    }
 }
 
 .d-f{
@@ -98,12 +145,20 @@ button {
     justify-content: center;
 }
 
+.p-r{
+    position: relative;
+}
+
 .jc-sb{
     justify-content: space-between;
 }
 
 .jc-fs{
     justify-content: flex-start;
+}
+
+.jc-fe{
+    justify-content: flex-end;
 }
 
 .fd-c{

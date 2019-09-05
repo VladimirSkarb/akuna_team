@@ -15,7 +15,7 @@
                 </form>
             </div>
         </section>
-       <section class="all-items_section">
+       <section class="all-items_section p-r">
            <div class="container">
                <div class="row d-f fw-w">
                    <div class="breadcrumbs-holder">
@@ -24,15 +24,20 @@
                            <li><span>Product page</span></li>
                        </ul>
                    </div>
+                   <button class="aside-opener"><i class="fas fa-angle-right"></i></button>
                    <aside class="aside">
+                       <button class="aside-close"><i class="fas fa-angle-left"></i></button>
                        <div class="bg-white">
-                            <strong>Categories</strong>
+                            <strong class="aside-title">Categories</strong>
                        </div>
                        <div class="bg-white">
-                           <strong>Categories</strong>
+                           <strong class="aside-title">Price Range</strong>
+                           <div class="range-slider-wrap">
+                               <input type="text" id="price-range" name="prace-range" value="">
+                           </div>
                        </div>
                        <div class="bg-white">
-                           <strong>Categories</strong>
+                           <strong class="aside-title">Categories</strong>
                        </div>
                    </aside>
                    <div class="products-holder">
@@ -187,5 +192,10 @@
     </main>
     //= ../block/footer.html
 </div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="../../js/pages/ion.rangeSlider.min.js"></script>
+<script src="../../js/pages/home.min.js"></script>
 </body>
 </html>
