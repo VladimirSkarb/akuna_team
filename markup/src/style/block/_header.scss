@@ -89,7 +89,6 @@ body {
 .banner-search {
     height: 532px;
     background-image: url('../../img/header-bg.jpg');
-    filter: grayscale(100%);
     color: $white;
 
     &_title {
@@ -108,7 +107,7 @@ body {
 .search-bar {
     img {
         position: absolute;
-        top: 306px;
+        top: 433px;
         right: 420px;
     }
 
@@ -118,8 +117,14 @@ body {
         padding: 0 20px 0 25px;
         border-radius: 3px;
         border-color: transparent;
-        box-shadow: 0 1px 10px rgba(124, 178, 64, 0.75);
+        box-shadow: 0 1px 10px rgba(100, 100, 100, 0.75);
         font-family: $rob_regular;
         font-size: $f-size-base;
+        
+        &:focus,
+        &:active {
+            box-shadow: 0 1px 10px rgba(124, 178, 64, 0.75);
+            outline: none;
+        }
     }
 }

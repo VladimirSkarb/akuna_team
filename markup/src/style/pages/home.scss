@@ -93,10 +93,14 @@ h2{
     li{
       padding: 0 3px;
 
+      @include media('<=tablet') {
+          margin-bottom: 6px;
+      }
+
       &.active{
         a{
           outline: none;
-          font:500 14px $rob_medium;
+          font: 500 14px $rob_medium;
           background-color: $red;
           color: $white;
         }
@@ -139,10 +143,28 @@ h2{
       @include triangle(65px, $green, up-left);
 
       position: absolute;
-      content: '';
+      content: "";
       display: block;
       top:0;
       left: 0;
+      
+    }
+
+    &:after {
+        position: absolute;
+        color: #fff;
+        display: inline-block;
+        content: '\f0e7';
+        -webkit-font-smoothing: antialiased;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        top: 14px;
+        left: 14px;
+        color: $white;
     }
   }
 
@@ -152,4 +174,164 @@ h2{
   }
 }
 
+.breadcrumbs {
+    &-holder {
+        width: 100%;
+        padding: 50px 15px 0;
+        margin: 0 0 40px;
+    }
 
+    &-nav {
+        &_list {
+            margin: 0 -10px;
+
+            li {
+                position: relative;
+                padding: 0 10px;
+
+                &:last-child {
+                    &::after {
+                        display: none;
+                    }
+                }
+
+                &:after {
+                    position: absolute;
+                    content: '-';
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: -4px;
+                    color: $green;
+                }
+            }
+        }
+    }
+}
+
+.aside {
+  @include animate(opacity visibility transform);
+
+    padding: 0 15px;
+    width: 300px;
+
+    @include media('<1024px'){
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #f4f6f5;
+      overflow: hidden;
+      height: 100vh;
+      padding: 25px 15px;
+      box-shadow: 0 1px 10px rgba(100, 100, 100, 0.75);
+      z-index: 10;
+      transform: translateX(-100%);
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &-title {
+      display: block;
+      padding: 0 0 20px;
+      border-bottom: 1px solid #dde3e8;
+    }
+
+    &-close {
+      display: none;
+      position: absolute;
+      border: none;
+      background-color: transparent;
+      top: 5px;
+      right: 15px;
+      width: 20px;
+      height: 20px;
+      outline: none;
+      cursor: pointer;
+      
+      @include media('<1024px'){
+        display: block;
+      }
+    }
+
+    &-opener {
+      display: none;
+      position: fixed;
+      cursor: pointer;
+      top: 100px;
+      left: 0;
+      width: 50px;
+      height: 50px;
+      box-shadow: 0 1px 10px rgba(100, 100, 100, 0.75);
+      z-index: 9;
+
+      @include media('<1024px'){
+        display: block;
+      }
+    }
+
+    .active-aside & {
+      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
+    }
+}
+
+.bg-white {
+    background-color: #fff;
+    padding: 25px 30px;
+    margin: 0 0 30px;
+}
+
+.products {
+    &-holder {
+        padding: 0 15px;
+        width: calc(100% - 300px);
+
+        .sorts-holder {
+            width: 100%;
+        }
+    }
+}
+
+.range {
+  &-slider {
+    &-wrap {
+      padding: 41px 0;
+      
+
+      .irs {
+        &-bar {
+          top: 0;
+          height: 5px;
+          background-color: #37474f;
+        }
+
+        &-line {
+          height: 5px;
+          background-color: #f2f5f8;
+        }
+
+        &-from,
+        &-to {
+          top: 20px;
+          color: #78909c;
+          font-size: $default-font;
+
+          &:before {
+            position: absolute;
+            content: '';
+            display: block;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border: 3px solid $green;
+            top: -25px;
+            z-index: 10;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+      }
+    }
+  }
+}

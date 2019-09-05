@@ -2,6 +2,7 @@
 @import "../../node_modules/reset-css/reset";
 @import "settings/_index.scss";
 
+body,
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,6 +13,10 @@ body{
     font-family: $rob_regular, sans-serif;
     color: $dark-grey;
     background-color: $white;
+}
+
+.main {
+    background-color: $light-grey;
 }
 
 a {
@@ -41,6 +46,7 @@ button {
 
 .row {
     margin: 0 -15px;
+    width: calc(100% + 30px);
 }
 
 .row:after {
@@ -51,10 +57,43 @@ button {
 
 .col {
     padding: 0 15px;
+
+    &-2 {
+        width: calc(100%/2);
+
+        @include media('<=desktop') {
+            width: 100%;
+        }
+    }
+
+    &-3 {
+        padding: 0 15px;
+        width: calc(100%/3);
+        
+        @include media('<=desktop') {
+            width: 50%
+        }
+    
+        @include media('<=tablet') {
+            width: 100%;
+        }
+    }
 }
 
 .col-4{
     width: calc(100% / 4);
+
+    @include media('<=desktop') {
+        width: calc(100%/3)
+    }
+
+    @include media('<=tablet') {
+        width: 50%;
+    }
+
+    @include media('<=700px') {
+        width: 100%;
+    }
 }
 
 .d-f{
@@ -77,12 +116,20 @@ button {
     justify-content: flex-start;
 }
 
+.jc-fe{
+    justify-content: flex-end;
+}
+
 .fd-c{
     flex-direction: column;
 }
 
 .ai-c{
     align-items: center;
+}
+
+.p-r {
+    position: relative;
 }
 
 .text-center{
