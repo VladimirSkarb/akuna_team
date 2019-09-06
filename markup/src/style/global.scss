@@ -2,7 +2,6 @@
 @import "../../node_modules/reset-css/reset";
 @import "settings/_index.scss";
 
-body,
 * {
     box-sizing: border-box;
     margin: 0;
@@ -147,3 +146,126 @@ button {
     }
 }
 
+.btn {
+    &-form {
+        color: #000;
+        background-color: #fff;
+        border: none;
+        font-size: 14px;
+        padding: 15px 20px;
+        width: 140px;
+        text-align: center;
+        margin: 10px;
+    }
+
+    &-create {
+        display: block;
+        position: relative;
+        width: calc(100% - 150px);
+        background-color: #76ae36;
+        color: #fff;
+        font-size: 14px;
+        padding: 16px 20px;
+        text-align: center;
+
+        i {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 35px;
+            color: inherit;
+        }
+    }
+}
+
+.login {
+    &-form {
+        max-width: 400px;
+        margin: 0 auto;
+
+        &_popup {
+            background-color: $green;
+            padding: 90px;
+        }
+
+        .input-holder {
+            position: relative;
+            width: 100%;
+            margin: 0 0 10px;
+
+            input {
+                width: 100%;
+                background-color: #76ae36;
+                border: none;
+                height: 42px;
+                padding: 10px 40px;
+            }
+
+            i {
+                position: absolute;
+                left: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: #fff;
+            }
+        }
+    }
+
+    &-title {
+        display: block;
+        text-transform: uppercase;
+        color: #fff;
+        text-align: center;
+        font-size: 48px;
+    }
+}
+
+.ui-dialog {
+    position: fixed !important;
+    outline: none;
+
+    &:before {
+        position: fixed;
+        content: '';
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100vw;
+        height: 100vh;
+        background-color: #000;
+        opacity: .6;
+        z-index: -1;
+    }
+
+    .ui-button-icon-only {
+        font-size: 0 !important;
+        line-height: 0 !important;
+        width: 20px;
+        height: 20px;
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        cursor: pointer;
+
+        .ui-button-icon-space {
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1 !important;
+            font-size: 16px !important;
+            font-family: Font Awesome\ 5 Free;
+            font-weight: 900;
+            color: #fff;
+
+            &:before {
+                content: "\f00d";
+            }
+        }
+    }
+}

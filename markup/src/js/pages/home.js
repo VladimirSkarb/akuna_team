@@ -2,6 +2,7 @@ $(function(){
   rangeSlider();
   asideOpen();
   asideClose();
+  dialogInit();
 
   $('#tabs-block_holder').tabs({
     activate: function (event, ui) {
@@ -45,5 +46,27 @@ function asideClose() {
 		} else {
 			$('body').addClass('active-aside');
 		}
+	});
+}
+
+function dialogInit() {
+  console.log(1);
+
+	$("#dialog").dialog({
+    minWidth: 730,
+		autoOpen: false,
+		show: {
+			effect: "fade",
+			duration: 300
+		},
+		hide: {
+			effect: "fade",
+			duration: 300
+		}
+	});
+   
+	$("#opener").on("click", function() {
+    console.log(2);
+		$("#dialog").dialog("open");
 	});
 }
