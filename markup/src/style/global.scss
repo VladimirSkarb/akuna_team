@@ -184,3 +184,134 @@ button {
     }
 }
 
+.btn{
+    &-form{
+        display: block;
+        color: $black;
+        background-color: $white;
+        border: none;
+        font-size: 14px;
+        padding: 15px 20px;
+        width: 140px;
+        text-align: center;
+        margin: 10px;
+    }
+
+    &-creat{
+        display: block;
+        position: relative;
+        width: calc(100% - 150px);
+        background-color: #76ae36;
+        color: $white;
+        font-size: 14px;
+        text-align: center;
+        padding: 16px 20px;
+
+        i{
+            position: absolute;
+            top:50%;
+            transform: translateY(-50%);
+            left: 35px;
+            color: inherit;
+        }
+    }
+}
+
+.login{
+    &-form{
+        max-width: 400px;
+        margin: 0 auto;
+        &_popup{
+           background-color: $green;
+           padding: 90px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .input-holder{
+            width: 100%;
+            position: relative;
+            margin-bottom: 10px;
+
+            input{
+                @include placeholder{
+                    color: $white;
+                }
+
+                width: 100%;
+                background-color: #76ae36;
+                border: none;
+                height: 42px;
+                padding: 10px 40px;
+                color: $white;
+                outline: none;
+            }
+
+            i{
+                position: absolute;
+                left: 15px;
+                top:50%;
+                transform: translateY(-50%);
+                color: $white;
+            }
+        }
+    }
+
+    &-title{
+        display: block;
+        text-transform: uppercase;
+        color: $white;
+        font-size: 48px;
+        text-align: center;
+    }
+}
+
+.ui-dialog{
+    position: fixed !important;
+    outline: none;
+
+    &:before{
+        position: fixed;
+        content: '';
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100vw;
+        height: 100vh;
+        background-color: $black;
+        opacity: .6;
+        z-index: -1;
+    }
+
+    .ui-button-icon-only{
+        font-size: 0 !important;
+        line-height: 0 !important;
+        width: 20px;
+        height: 20px;
+        background-color: transparent;
+        border: none;
+        color: $white;
+        position: absolute;
+        top: 20px;
+        right: 2px;
+        z-index: 2;
+        cursor: pointer;
+
+        .ui-button-icon-space{
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1 !important;
+            font-size: 16px !important;
+            font-family:"Font Awesome 5 Free";
+            font-weight: 900;
+            color: $white;
+
+            &:before{
+                content: "\f00d";
+            }
+        }
+    }
+}
