@@ -83,9 +83,9 @@
 
       a {
         outline: none;
+        display: block;
       }
 
-      
       &.active {
         color: $dark-grey;
         border-bottom: 3px solid $green;
@@ -224,5 +224,12 @@
     .pinterest {
       background-color: #d32f2f;
     }
+  }
+}
+
+.more-product {
+  &_title {
+    height: 60px;
+    background-color: #fff;
   }
 }

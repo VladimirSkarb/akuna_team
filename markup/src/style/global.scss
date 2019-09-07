@@ -14,6 +14,18 @@ body{
     background-color: $white;
 }
 
+h1 {
+    font-size: $f-size-h1;
+}
+
+h2 {
+    font-size: $f-size-h2;
+}
+
+h3 {
+    font-size: $f-size-h3;
+}
+
 .main {
     background-color: $light-grey;
 }
@@ -76,6 +88,11 @@ button {
         @include media('<=tablet') {
             width: 100%;
         }
+    }
+
+    &-3+ {
+        padding: 0 15px;
+        width: calc(100%/3 + 40px);
     }
 }
 
