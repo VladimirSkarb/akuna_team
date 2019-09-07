@@ -19,7 +19,7 @@
       width: calc(100% - 300px);
     }
   
-    .img-holder {
+    .img-holder1 {
       background-color: #fff;
       width: 829px;
       height: 440px;
@@ -231,5 +231,21 @@
   &_title {
     height: 60px;
     background-color: #fff;
+    border: 1px solid #d7d7d7;
+    margin-bottom: 30px;
+
+    h3 {
+      font-size: $f-size-h4;
+      padding: 25px 30px;
+    }
+  }
+
+  .img-holder {
+    width: 100px;
+    height: 90px;
+  }
+
+  .product-description {
+    padding: 0 0 0 20px;
   }
 }

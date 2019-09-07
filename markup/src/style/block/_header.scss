@@ -17,13 +17,25 @@ body {
     height: 30px;
     border-color: transparent;
     margin: 0 2px;
+
+    @include media('<=768px'){
+        width: 65px;
+    }
+
+    @include media('<=530px'){
+        height: 25px;
+        font-size: 12px;
+    }
+
+    @include media('<=500px'){
+        font-size: 10px;
+    }
 }
 
 .btn-header1 {
     color: $white;
     background-color: $btn-green-bg;
     font-family: $rob_regular;
-    font-size: $f-size-base;
 
     &:hover {
         background-color: $btn-green-bg-hover;
@@ -34,7 +46,6 @@ body {
     color: $white;
     background-color: $btn-red-bg;
     font-family: $rob_regular;
-    font-size: $f-size-base;
 
     &:hover {
         background-color: $btn-red-bg-hover;
@@ -49,6 +60,18 @@ body {
     border-radius: 50%;
     border-color: transparent;
     margin: 0 24px;
+
+    @include media('<=681px'){
+        margin: 0 10px;
+        width: 25px;
+        height: 25px;
+        font-size: 12px;
+    }
+
+    @include media('<=530px'){
+        margin: 0 5px;
+        font-size: 10px;
+    }
 }
 
 .help {
@@ -57,6 +80,24 @@ body {
     margin: 0 26px;
     font-family: $rob_regular;
     color: #546e7a;
+
+    @include media('<=900px'){
+        font-size: 12px;
+        margin: 0;
+    }
+
+    @include media('<=768px'){
+        font-size: 11px;
+    }
+
+    @include media('<=681px'){
+        font-size: 9px;
+    }
+
+    @include media('<=530px'){
+        font-size: 8px;
+        padding-left: 93px;
+    }
 
     &-a {
         color: $btn-red-bg;
@@ -69,7 +110,7 @@ body {
 
 .nav {
     background-color: $nav-color2;
-    padding: 0 19.3%;
+
     margin: 0 auto;
     height: 60px;
 
@@ -80,51 +121,12 @@ body {
         line-height: $line-height-base;
         font-family: $rob_regular;
 
+        @include media('<=900px'){
+            margin: 0 10px;
+        }
+
         &:hover {
             color: $nav-color-hover;
-        }
-    }
-}
-
-.banner-search {
-    height: 532px;
-    background-image: url('../../img/header-bg.jpg');
-    color: $white;
-
-    &_title {
-        font-size: $f-size-h1;
-        font-family: $rob_bold;
-        font-weight: 700;
-    }
-
-    &_text {
-        margin: 35px 0 57px;
-        font-family: $rob_regular;
-        font-size: 20px;
-    }
-}
-
-.search-bar {
-    img {
-        position: absolute;
-        top: 433px;
-        right: 420px;
-    }
-
-    .banner-search_bar {
-        width: 670px;
-        height: 56px;
-        padding: 0 20px 0 25px;
-        border-radius: 3px;
-        border-color: transparent;
-        box-shadow: 0 1px 10px rgba(100, 100, 100, 0.75);
-        font-family: $rob_regular;
-        font-size: $f-size-base;
-        
-        &:focus,
-        &:active {
-            box-shadow: 0 1px 10px rgba(124, 178, 64, 0.75);
-            outline: none;
         }
     }
 }
