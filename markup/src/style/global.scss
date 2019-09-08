@@ -54,6 +54,18 @@ h3{
     }
 }
 
+h1 {
+    font-size: $f-size-h1;
+}
+
+h2 {
+    font-size: $f-size-h2;
+}
+
+h3 {
+    font-size: $f-size-h3;
+}
+
 .main {
     background-color: $light-grey;
 }
@@ -112,6 +124,11 @@ button {
         }
     }
 
+    &-3+ {
+        padding: 0 15px;
+        width: calc(100%/3 + 40px);
+    }
+
     &-3{
         width: calc(100%/3);
 
@@ -163,6 +180,10 @@ button {
 
 .fd-c{
     flex-direction: column;
+}
+
+.fd-r{
+    flex-direction: row;
 }
 
 .ai-c{
