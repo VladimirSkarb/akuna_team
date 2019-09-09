@@ -93,6 +93,10 @@ h2{
     li{
       padding: 0 3px;
 
+      @include media ("<=768px") {
+        margin-bottom: 6px;
+      }
+
       &.active{
         a{
           outline: none;
@@ -139,16 +143,197 @@ h2{
       @include triangle(65px, $green, up-left);
 
       position: absolute;
-      content: '';
+      content: "";
       display: block;
       top:0;
-      left: 0;
+      left: 0; 
+    }
+
+    &::after {
+
+      position: absolute;
+      content: "\f0e7";
+      display: block;
+      top: 14px;
+      left: 14px;
+      -webkit-font-smoothing: antialiased;
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      line-height: 1;
+      font-family: Font Awesome\ 5 Free;
+      font-weight: 900;
+      color: #fff;
     }
   }
 
   .img-holder{
     height: 250px;
     background-color: $grey;
+  }
+}
+
+
+.breadcrumbs {
+  &-holder {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 0 40px;
+  }
+  
+  &-nav {
+    &_list {
+      margin: 0 -30px;
+
+      li {
+        position: relative;
+        padding: 0 10px;
+
+        &:last-child {
+          &::after {
+            display: none;
+          }
+        }
+
+        &:after {
+          position: absolute;
+          content: "-";
+          top: 50%;
+          transform: translateY(-50%);
+          right: -4px;
+
+        }
+      }
+    }
+  }
+
+}
+
+.aside {
+  padding: 0 15px;
+  width: 300px;
+
+  @include media('<1024px') {
+    position: fixed;
+    top : 0;
+    left : 0;
+    background-color : #f4f6f5;
+    overflow: hidden;
+    height: 100vh;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100%);
+    box-shadow: 0 1px 10px rgba(100, 100, 100, 0.75);
+    z-index: 10;
+
+
+
+  }
+
+  &-close {
+    display: none;
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    top : 5px;
+    right: 15px;
+    width: 20px;
+    height: 20px;
+    outline: none;
+    cursor: pointer;
+
+    @include media('<1024px') {
+      display: block;
+    }
+  }
+
+  &-opener {
+    display: none;
+    position: fixed;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: rgba(245, 243, 243, 25);
+    top: 100px;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 1px 10px rgba(100, 100, 100, 0.5);
+
+    @include media('<1024px') {
+      display: block;
+    }
+  }
+
+  .active-aside & {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &-title {
+    display: block;
+    padding: 0 0 20px;
+    border-bottom: 1px solid #dde3e8;
+  }
+}
+
+.bg-white {
+  background-color: #fff;
+  padding: 25px 30px;
+  margin: 0 0 30px;
+}
+
+.products {
+  &-holder {
+    padding: 0 15px;
+    width: calc(100% - 300px);
+
+      .sorts-holder {
+        width: 100%;
+      }
+  }
+}
+
+.range {
+  &-slider {
+    &-wrap {
+      padding: 40px 0 57px;
+      .irs {
+        &-bar {
+          top: 0;
+          height: 5px;
+          background-color : #37474f;
+        }
+        &-line {
+          height: 5px;
+          background-color : #f2f5f8;
+        }
+
+        &-from, 
+        &-to {
+          top: 20px;
+          color: #78909c;
+          font-size: 15px;
+
+          &:before {
+            position: absolute;
+            content:"";
+            border-radius: 50%;
+            display: block;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border : 3px solid #8bc34a;
+            top: -25px;
+            z-index: 10;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+      }
+    }
   }
 }
 
