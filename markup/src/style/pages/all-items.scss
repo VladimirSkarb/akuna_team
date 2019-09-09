@@ -38,55 +38,39 @@
 }
 
 .aside{
-  @include animate(opacity visibslity transfotm);
+  @include animate(opacity visibility transform);
 
   padding: 0 15px;
   width: 300px;
 
-  @include media('<1024px'){
+  @include media('<1024px') {
     position: fixed;
-    top:0;
+    top: 0;
     left: 0;
-    background-color: $light-grey;
+    background-color: #f4f6f5;
     overflow: hidden;
-    opacity: 0;
-    visibility: hidden;
     height: 100vh;
-    padding: 25px 15px;
     box-shadow: 0 1px 10px rgba(100, 100, 100, 0.75);
     z-index: 10;
+    padding: 25px 15px;
+    opacity: 0;
+    visibility: hidden;
     transform: translateX(-100%);
   }
 
-  &-title{
+  &-title {
     display: block;
     padding: 0 0 20px;
     border-bottom: 1px solid #dde3e8;
+    font-size: 20px;
+    font-weight: 700;
   }
 
-  &-opener{
+  &-close {
     display: none;
-    position: fixed;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    top: 100px;
-    left: 0;
-    width: 30px;
-    height: 30px;
-    background-color: $light-grey;
-    box-shadow: 0 1px 10px rgba(100, 100, 100, 0.5);
-
-    @include media('<1024px'){
-      display: block;
-    }
-  }
-
-  &-close{
-    display: none;
-    border: none;
-    background-color: transparent;
     position: absolute;
+    border: 0;
+    background-color: transparent;
     top: 5px;
     right: 15px;
     width: 20px;
@@ -94,22 +78,76 @@
     outline: none;
     cursor: pointer;
 
-    @include media('<1024px'){
+    @include media ('<1024px') {
       display: block;
     }
   }
 
-  .active-aside &{
+  &-opener {
+    display: none;
+    position: fixed;
+    top: 130px;
+    left: 0;
+    background-color: rgba(245, 243, 243, .25);
+    outline: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 1px 10px rgba(100, 100, 100, 0.75);
+    z-index: 9;
+
+    @include media ('<1024px') {
+      display: block;
+    }
+
+  }
+
+  .active-aside & {
     transform: translateX(0);
     opacity: 1;
     visibility: visible;
   }
-}
 
-.bg-white {
-  background-color: $white;
-  padding: 25px 30px;
-  margin: 0 0 30px;
+  &-search {
+    border-radius: 0;
+    width: 210px;
+    height: 46px;
+    margin: 0;
+    background-color: $btn-green-bg;
+    color: #fff;
+    font-size: 15px;
+
+    .fa-search {
+      padding: 0 10px 0 0;
+    }
+
+    &:hover {
+      background-color: $btn-green-bg-hover;
+    }
+  }
+
+  &-list {
+    padding-top: 28px;
+    li {
+      padding-bottom: 30px;
+      color: $dark-grey;
+      font-size: $default-font;
+
+      &:last-child {
+        padding-bottom: 20px;
+      }
+
+      .fa-angle-right {
+        padding-right: 13px;
+        color: $green;
+        font-size: $f-size-base;
+      }
+
+      span {
+        color: #90a4ae;;
+      }
+    }
+  }
 }
 
 .products{
@@ -123,38 +161,38 @@
   }
 }
 
-.range{
-  &-slider{
-    &-wrap{
+.range {
+  &-slider {
+    &-wrap {
+      padding: 40px 0 57px;
+      .irs {
 
-      .irs{
-
-        &-bar{
-          top:0;
+        &-bar {
+          top: 0;
           height: 5px;
           background-color: #37474f;
         }
-        &-line{
+
+        &-line {
           height: 5px;
           background-color: #f2f5f8;
         }
 
         &-from,
         &-to {
-          top: 20px;
           color: #78909c;
+          top: 20px;
           font-size: 15px;
-
 
           &:before {
             position: absolute;
             content: '';
             display: block;
             border-radius: 50%;
-            background-color: $white;
             width: 10px;
             height: 10px;
-            border: 3px solid $green;
+            background-color: #fff;
+            border: 3px solid #8bc34a;
             top: -25px;
             z-index: 10;
             left: 50%;
@@ -166,3 +204,112 @@
   }
 }
 
+.btn-all-items {
+  //font-size: $f-size-base;
+  //line-height: $line-height-base;
+  border-radius: 0;
+  width: 205px;
+  height: 46px;
+  //border-color: transparent;
+  //margin: 0 33px;
+}
+
+.b-n {
+  border: none;
+}
+
+.sellers {
+  &-reiting {
+    padding: 17px 0 27px;
+    border-bottom: 1px solid #e7ecf2;
+
+    &_last {
+      border-bottom: none;
+      padding: 17px 0;
+    }
+  }
+}
+
+.sort{
+  &-holder {
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #d7d7d7;
+    padding: 22px 21px;
+    margin: 0 0 30px;
+    color: #707070;
+
+    &_option {
+      i {
+        padding-right: 12px;
+      }
+    }
+
+    select {
+      border: none;
+      background-color: transparent;
+      outline:none;
+      display: inline-block;
+      -webkit-appearance:none;
+      -moz-appearance:none;
+      appearance:none;
+      cursor:pointer;
+      padding-right: 25px;
+      color: #707070;
+      text-align-last: center;
+    }
+
+    label {
+      position:relative;
+      &:after {
+        position: absolute;
+        content: '\f0dc';
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+        font-family: "Font Awesome 5 Free", sans-serif;
+        font-weight: 900;
+        right: 5px;
+        top: 4px;
+        pointer-events: none;
+      }
+    }
+
+    &_grid {
+      i {
+        padding-left: 12px;
+      }
+    }
+  }
+  &-reiting {
+    padding: 16px 23px;
+  }
+}
+
+.items {
+  &-list {
+    padding: 22px 12px 0;
+    margin: 0 0 110px;
+
+    a {
+      padding: 14px 19px;
+    }
+
+  }
+
+  &-bg-white {
+    background-color: $white;
+    padding: 31px 30px;
+    margin: 0 0 30px;
+  }
+
+}
+
+.all-items {
+  &_section {
+    padding-top: 0;
+  }
+}

@@ -62,7 +62,7 @@
     }
 
     @include media('<=330px'){
-      font-size: $f-size-h4;
+      font-size: 18px;
     }
   }
 
@@ -71,11 +71,11 @@
     margin-bottom: 55px;
 
     @include media('<=768px'){
-      font-size: $f-size-h4;
+      font-size: 18px;
     }
 
     @include media('<=640px'){
-      font-size: $f-size-base;
+      font-size: 14px;
     }
 
     @include media('<=483px'){
@@ -90,6 +90,15 @@
     @include media('<=330px'){
       font-size: 8px;
     }
+  }
+
+  .items-text {
+    padding-top: 60px;
+    margin: 0 0 24px;
+  }
+
+  .items-form {
+    margin-bottom: 70px;
   }
 
   form{
@@ -204,17 +213,43 @@
     @include media('<=768px'){
       padding: 20px;
     }
+
+    &_sort {
+      padding: 27px 22px;
+      border-bottom: 1px solid #e7ecf2;
+    }
+
+    &_sellers {
+      padding: 21px 0 0;
+    }
   }
 
   &-name{
     font: 500 $f-size-h4 $rob_medium;
     display: block;
     margin: 0 0 15px;
+
+    &_sellers {
+      font: 700 16px $rob_medium;
+      margin: 0 0 12px;
+    }
+
+    &_sort {
+      font: 500 16px $rob_medium;
+      margin: 0 0 12px;
+    }
   }
 
   &-category{
     font-size:$f-size-base;
     color:$green;
+  }
+
+  &-price {
+
+    &_sort {
+      font-size: 20px;
+    }
   }
 
   &-reiting{
@@ -393,6 +428,25 @@
       height: 200px;
     }
   }
+
+  .img-holder {
+    height: 250px;
+    background-color: $grey;
+  }
+
+  .img-aside-holder {
+    height: 121px;
+    background-color: $grey;
+  }
+
+  .img-holder_sort {
+    height: 180px;
+    background-color: $grey;
+  }
+}
+
+.sellers-col {
+  margin: 0 0 26px;
 }
 
 .product-button{
@@ -628,7 +682,7 @@
             }
 
             @include media('<=650px'){
-              font-size: $f-size-h4;
+              font-size: 18px;
               padding-left: 0;
             }
 
@@ -647,7 +701,7 @@
 
           .btn-main{
             padding: 20px 42px;
-            font-size: $f-size-h4;
+            font-size: 18px;
 
             @include media('<=950px'){
               padding: 15px 35px;
@@ -666,7 +720,7 @@
 
             @include media('<=570px'){
               padding: 10px;
-              font-size: $f-size-base;
+              font-size: 18px;
             }
 
             @include media('<=570px'){
@@ -705,7 +759,7 @@
     }
 
     @include media('<=507px'){
-      font-size: $f-size-h4;
+      font-size: 18px;
     }
   }
 
