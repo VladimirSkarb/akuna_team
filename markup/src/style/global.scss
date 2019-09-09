@@ -12,7 +12,7 @@ body{
     font-family: $rob_regular, sans-serif;
     color: $dark-grey;
     background-color: $white;
-    font-size: $default-font;
+    font-size: $f-size-base;
 }
 
 h2{
@@ -52,18 +52,6 @@ h3{
     @include media('<=750px'){
         font-size: 17px;
     }
-}
-
-h1 {
-    font-size: $f-size-h1;
-}
-
-h2 {
-    font-size: $f-size-h2;
-}
-
-h3 {
-    font-size: $f-size-h3;
 }
 
 .main {
