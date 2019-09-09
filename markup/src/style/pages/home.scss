@@ -92,6 +92,15 @@
     }
   }
 
+  .items-text {
+    padding-top: 60px;
+    margin: 0 0 24px;
+  }
+
+  .items-form {
+    margin-bottom: 70px;
+  }
+
   form{
     margin-bottom: 175px;
 
@@ -204,17 +213,43 @@
     @include media('<=768px'){
       padding: 20px;
     }
+
+    &_sort {
+      padding: 27px 22px;
+      border-bottom: 1px solid #e7ecf2;
+    }
+
+    &_sellers {
+      padding: 21px 0 0;
+    }
   }
 
   &-name{
     font: 500 18px $rob_medium;
     display: block;
     margin: 0 0 15px;
+
+    &_sellers {
+      font: 700 16px $rob_medium;
+      margin: 0 0 12px;
+    }
+
+    &_sort {
+      font: 500 16px $rob_medium;
+      margin: 0 0 12px;
+    }
   }
 
   &-category{
     font-size:14px;
     color:$green;
+  }
+
+  &-price {
+
+    &_sort {
+      font-size: 20px;
+    }
   }
 
   &-reiting{
@@ -314,7 +349,9 @@
       &.active{
         a{
           outline: none;
-          font:500 14px $rob_medium;
+          //font:500 14px $rob_medium;
+          font-family: $rob_medium;
+          font-weight: 500;
           background-color: $red;
           color: $white;
         }
@@ -393,6 +430,25 @@
       height: 200px;
     }
   }
+
+  .img-holder {
+    height: 250px;
+    background-color: $grey;
+  }
+
+  .img-aside-holder {
+    height: 121px;
+    background-color: $grey;
+  }
+
+  .img-holder_sort {
+    height: 180px;
+    background-color: $grey;
+  }
+}
+
+.sellers-col {
+  margin: 0 0 26px;
 }
 
 .product-button{
