@@ -200,7 +200,7 @@
 
     h2{
       @include media('<=443px'){
-        font-size: 18px;
+        font-size: $f-size-h4;
       }
     }
   }
@@ -225,7 +225,7 @@
   }
 
   &-name{
-    font: 500 18px $rob_medium;
+    font: 500 $f-size-h4 $rob_medium;
     display: block;
     margin: 0 0 15px;
 
@@ -241,7 +241,7 @@
   }
 
   &-category{
-    font-size:14px;
+    font-size:$f-size-base;
     color:$green;
   }
 
@@ -268,7 +268,7 @@
 
       span{
         color: #546e7a;
-        font-size: 14px;
+        font-size: $f-size-base;
       }
     }
 
@@ -349,9 +349,7 @@
       &.active{
         a{
           outline: none;
-          //font:500 14px $rob_medium;
-          font-family: $rob_medium;
-          font-weight: 500;
+          font:500 $f-size-base $rob_medium;
           background-color: $red;
           color: $white;
         }
@@ -458,7 +456,7 @@
 
     @include media('<=425px'){
       padding: 10px 15px;
-      font-size: 14px;
+      font-size: $f-size-base;
     }
   }
 
@@ -722,7 +720,7 @@
 
             @include media('<=570px'){
               padding: 10px;
-              font-size: 14px;
+              font-size: 18px;
             }
 
             @include media('<=570px'){
