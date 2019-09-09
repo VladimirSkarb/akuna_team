@@ -74,6 +74,89 @@ body {
     }
 }
 
+.btn-icon_profile {
+    background-color: #b5b5b5;
+    margin: 0 13px;
+}
+
+.btn-icon_bell {
+    margin: 0 8px;
+    position: relative;
+
+    &:before {
+        @include triangle(18px, #fcb322, up-left);
+
+        position: absolute;
+        content: '';
+        display: block;
+        top: -10px;
+        left: 20px;
+        border-radius: 50%;
+    }
+
+    &:after {
+        position: absolute;
+        color: #fff;
+        display: inline-block;
+        content: '8';
+        top: -7px;
+        left: 26px;
+        font-size: 11px;
+    }
+}
+
+.btn-icon_mail {
+    margin: 0 8px;
+    position: relative;
+
+    &:before {
+        @include triangle(18px, #ef6c00, up-left);
+
+        position: absolute;
+        content: '';
+        display: block;
+        top: -10px;
+        left: 20px;
+        border-radius: 50%;
+    }
+
+    &:after {
+        position: absolute;
+        color: #fff;
+        display: inline-block;
+        content: '5';
+        top: -7px;
+        left: 26px;
+        font-size: 11px;
+    }
+}
+
+.btn-icon_cart {
+    margin: 0 8px;
+    position: relative;
+
+    &:before {
+        @include triangle(18px, #95c85a, up-left);
+
+        position: absolute;
+        content: '';
+        display: block;
+        top: -10px;
+        left: 20px;
+        border-radius: 50%;
+    }
+
+    &:after {
+        position: absolute;
+        color: #fff;
+        display: inline-block;
+        content: '8';
+        top: -7px;
+        left: 26px;
+        font-size: 11px;
+    }
+}
+
 .help {
     font-size: $f-size-base;
     line-height: $line-height-base;
@@ -110,7 +193,7 @@ body {
 
 .nav {
     background-color: $nav-color2;
-
+    //padding: 0 19.3%;
     margin: 0 auto;
     height: 60px;
 
@@ -127,6 +210,29 @@ body {
 
         &:hover {
             color: $nav-color-hover;
+        }
+    }
+}
+
+.top-bar {
+    &_profile {
+        .profile {
+            font-size: 14px;
+            font-family: $rob_medium;
+
+            &-name {
+                font-weight: 500;
+                color: #222;
+                padding-bottom: 4px;
+
+                i {
+                    padding: 0 29px 0 13px;
+                }
+            }
+            &-balance {
+                font-weight: 700;
+                color: $green;
+            }
         }
     }
 }
